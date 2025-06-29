@@ -1,30 +1,34 @@
 % 基本とドライバ関連
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{makeidx}
+\usepackage{ascmac}
+
 % LuaTeX-ja設定
 \usepackage{luatexja}% 日本語したい
 \usepackage[haranoaji,no-math,deluxe,expert,nfssonly,match,scale=1.0]{luatexja-preset}
 \renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
 \usepackage{lltjext}
+
 % 数式系基本
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{mathtools}
 \mathtoolsset{showonlyrefs=true}
-\usepackage[italic]{derivative}
+\usepackage{derivative}
 \usepackage[b]{esvect}
 \usepackage{nicematrix}
 \usepackage{siunitx}
+
 % 画像関係
-\usepackage{animate}
+% \usepackage{animate}
 \usepackage{svg}
 \usepackage{tikz}
-%%%%%%%%%%%%%%%%%%%%%%%
-\graphicspath{{../../fig/}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %表関連
 \usepackage{multirow}
+
 % 自然科学用追加
 % \usepackage{chemmacros}
 % \usechemmodule{all}
@@ -40,3 +44,16 @@
 % \usepackage[scale=\ttscale]{roboto-mono}
 % \usepackage{BOONDOX-uprscr}
 % \usepackage{BOONDOX-ds}
+
+% ページ設定
+\usepackage{geometry}
+\geometry{left=25truemm, right=25truemm, top=25truemm, bottom=25truemm}
+% \pagestyle{empty}
+
+% hyperref関連
+\usepackage{bookmark}
+\usepackage{xurl}
+\hypersetup{unicode,bookmarksnumbered=true,hidelinks,final}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{{../figure/}}

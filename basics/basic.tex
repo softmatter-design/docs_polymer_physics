@@ -1,41 +1,10 @@
-\documentclass[uplatex,dvipdfmx,a4paper,11pt, titlepage]{jsarticle}
+\documentclass[a4paper,11pt]{ltjsarticle}
+\input{../files/preamble}
 
-\usepackage{multirow}
-\usepackage{makeidx}
 
-\usepackage{wrapfig}
-
-\usepackage{amsmath,amsthm,amssymb}
-\usepackage[dvipdfmx]{graphicx, color}
-
-\definecolor{gray}{gray}{0.8}
 \usepackage{bm}
-\usepackage{ascmac}
 
-%% 高さの設定
-\usepackage{geometry}
-\geometry{left=25truemm, right=25truemm, top=25truemm, bottom=25truemm}
-% \pagestyle{empty}
 
-\usepackage[%
- dvipdfmx,% 欧文ではコメントアウトする
- setpagesize=false,%
- bookmarks=true,%
- bookmarksdepth=tocdepth,%
- bookmarksnumbered=true,%
-%  hidelinks
- colorlinks=true,	
- linkcolor=red,anchorcolor=blue,urlcolor=red,citecolor=green
-%  
- pdftitle={高分子モデルを理解する。},%
- pdfsubject={},%
- pdfauthor={佐々木裕},%
- pdfkeywords={}%
-]{hyperref}
-% PDFのしおり機能の日本語文字化けを防ぐ((u)pLaTeXのときのみかく)
-\usepackage{pxjahyper}
-
-\makeatother 
 %微分関連のマクロ
 %
 \newcommand{\diff}{\mathrm d}
@@ -46,8 +15,9 @@
 \allowdisplaybreaks[3]
 
 \title{高分子モデルを理解する。\\ミクロな化学的視点から、粗視化した物理的視点へ}
-\author{佐々木裕 \thanks{\url{https://github.com/softmatter-design/docs-polymer_physics.git}\\e-mail: hiroshi\_sasaki$@$mail.toagosei.co.jp}}
+\author{佐々木裕 \thanks{e-mail: hiroshi\_sasaki$@$mail.toagosei.co.jp}}
 \date{\today}
+
 \begin{document}
 \maketitle
 
@@ -123,20 +93,20 @@
 例えば、一般に光学特性のような分子構造に強く依存する特性はミクロな議論が主となる場合が多く、自動車タイヤの力学特性のようなマクロよりな特性の場合はメゾスケールでの階層構造が非常に重要であることが知られてきている。
 }。
 
-高分子の場合、このメモで示すように、その鎖としての構造の自由度が非常に高く、マクロな機能性へのメゾスケール構造の寄与が非常に大きいことが知られている。
-このことが、低分子には見られない高分子特有の振る舞いの原因であり、このような高分子の形状に起因した特徴的な振る舞いをうまく利用して材料設計を行おうという考えが、近年、急速に広まってきている
+高分子の場合、このメモで示すように、その鎖としての構造の自由度が非常に高く、マクロな機能性へのメゾスケール構造の寄与が非常に大きいことが知られています。
+このことが、低分子には見られない高分子特有の振る舞いの原因であり、このような高分子の形状に起因した特徴的な振る舞いをうまく利用して材料設計を行おうという考えが、近年、急速に広まってきています
 \footnote
 {
-このような流れの端緒は、ノーベル賞受賞者であるド・ジャンによるものであり、金属のように硬い物質との対比で、「ソフトマター」と名付けられている。
-ソフトマターの対象となるのは、高分子だけではなくて、界面活性剤が形成するミセルやビヒクルのようなものも含まれており、決して、分子量が大きいことが必須なわけではない。
+このような流れの端緒は、ノーベル賞受賞者であるド・ジャンによるものであり、金属のように硬い物質との対比で、「ソフトマター」と名付けられています。
+ソフトマターの対象となるのは、高分子だけではなくて、界面活性剤が形成するミセルやビヒクルのようなものも含まれており、決して、分子量が大きいことが必須なわけではありません。
 
-一般に、ソフトマターと呼ばれるものは、各種の構造間の遷移に伴う活性化エネルギーが熱エネルギー程度（$\simeq k_B T$）であり、構造変換が容易に起こるような、ソフトな（移ろいやすい）物質、あるいは、事象を指している。
+一般にソフトマターと呼ばれるものは、各種の構造間の遷移に伴う活性化エネルギーが熱エネルギー程度（$\simeq k_B T$）であり、構造変換が容易に起こるような、ソフトな（移ろいやすい）物質あるいは事象を指しています。
 }。
 \subsection{高分子の形}
 
-高分子の形を考える場合に、立体配置（コンフィギュレーション）と立体配座（コンフォメーション）という、二つの異なった観点で考える必要がある。
+高分子の形を考える場合に、立体配置（コンフィギュレーション）と立体配座（コンフォメーション）という、2つの異なった観点で考える必要がある。
 
-立体配置は、モノマー内、あるいは、モノマー間の共有結合の生成により規定される構造の様式であり、主として、以下の三つのような結合様式に基づいている
+立体配置は、モノマー内あるいはモノマー間の共有結合の生成により規定される構造の様式であり、主として以下の3つのような結合様式に基づいている
 \vspace{-2mm}
 \begin{itemize}
 \item 
@@ -148,7 +118,7 @@
 \end{itemize}
 \vspace{-2mm}
 さらには、高分子鎖の主鎖の分岐やデンドリマー、環状構造のような大きなスケールの構造も含まれてくる。
-いづれにせよ、構造の大きさに関わらず、共有結合を切断することなしには異なる構造へと遷移できないものである。
+いづれにせよ、構造の大きさにかかわらず、共有結合を切断することなしには異なる構造へと遷移できないものである。
 一般に、合成系研究者にとっての高分子の設計とは、この立体配座を主に考えている場合が多いようである。
 
 一方、立体配座は、第二章に示すように、高分子鎖中の C-C 結合周りの回転に基づくものであり、一般に、熱揺らぎ程度で容易に遷移してしまうものである。
@@ -868,12 +838,12 @@ N_k = \dfrac{N}{C_{\infty} }
 
 ゴムの弾性的特徴を熱力学的立場から考察してみよう。
 
-ゴムの試料に張力 $f$ をかけて、$x$ 軸方向に試料の長さが $L$ から微小量 $\diff L$ だけ伸長される{\bf 準静的過程}を考える。
+ゴムの試料に張力 $f$ をかけて、$x$ 軸方向に試料の長さが $L$ から微小量 $\odif{L}$ だけ伸長される{\bf 準静的過程}を考える。
 このときの内部エネルギー $E$ に対する熱力学第 1 法則は、
 \begin{align*}
-	\diff E = T \diff S − p \diff V + f \diff L
+	\odif{E} = T \odif{S} − p \odif{V} + f \odif{L}
 \end{align*}
-となり、ゴムの変形では体積が一定に保たれる（非圧縮性）ので、$\diff V = 0$ とおき、定圧定温条件下でこの式を $\diff L$ で割ると、
+となり、ゴムの変形では体積が一定に保たれる（非圧縮性）ので、$\odif{V} = 0$ とおき、定圧定温条件下でこの式を $\odif{L}$ で割ると、
 \begin{align*}
 f = \left( \difp{E}{L} \right)_{p, T} -T\left( \difp{S}{L} \right)_{p, T}
 \end{align*}
@@ -1917,13 +1887,13 @@ R_g^2
 なお、こちらの展開においては、上記の展開で行った $i , j$ の大小関係に基づく絶対値の場合分けを積分範囲の分割という形で行っているので、式中には 2 の因子はでてこない。
 \begin{align*}
 R_g^2 
-	&= \dfrac{1}{2(N+1)^2} \left \langle \int_{0}^N \diff i \int_{0}^N \diff j (\bm{r}_i - \bm{r}_j) \cdot (\bm{r}_i - \bm{r}_j) \right \rangle\\
-	&= \dfrac{1}{2(N+1)^2} \left \langle \int_{0}^N \diff i \int_{0}^{N} \diff j \left|\bm{r}_i - \bm{r}_j \right|^2 \right \rangle\\
-	&= \dfrac{a^2}{2(N+1)^2} \int_{0}^N \diff i \int_{0}^{N} \diff j \left|\bm{r}_i - \bm{r}_j \right| \\
-	&= \dfrac{a^2}{2(N+1)^2} \int_{0}^N \diff i \left\{ \int_{0}^{i} \diff j (i -j) + \int_i^N \diff j \left[ -(i-j) \right] \right\} \\
-	&= \dfrac{a^2}{2(N+1)^2} \int_{0}^N \diff i \left\{ \left [ij - \dfrac{j^2}{2} \right]_0^i - \left[ ij - \dfrac{j^2}{2} \right]_i^N \right\} \\
-	&= \dfrac{a^2}{2(N+1)^2} \int_{0}^N \diff i \left\{ \left (i^2 - \dfrac{i^2}{2} \right) - \left[ \left(Ni - \dfrac{N^2}{2} \right) - \left (i^2 - \dfrac{i^2}{2} \right) \right] \right\} \\
-	&= \dfrac{a^2}{2(N+1)^2} \int_{0}^N \diff i \left\{ i^2 - Ni + \dfrac{N^2}{2} \right\} \\
+	&= \dfrac{1}{2(N+1)^2} \left \langle \int_{0}^N \odif{i} \int_{0}^N \odif{j} (\bm{r}_i - \bm{r}_j) \cdot (\bm{r}_i - \bm{r}_j) \right \rangle\\
+	&= \dfrac{1}{2(N+1)^2} \left \langle \int_{0}^N \odif{i} \int_{0}^{N} \odif{j} \left|\bm{r}_i - \bm{r}_j \right|^2 \right \rangle\\
+	&= \dfrac{a^2}{2(N+1)^2} \int_{0}^N \odif{i} \int_{0}^{N} \odif{j} \left|\bm{r}_i - \bm{r}_j \right| \\
+	&= \dfrac{a^2}{2(N+1)^2} \int_{0}^N \odif{i} \left\{ \int_{0}^{i} \odif{j} (i -j) + \int_i^N \odif{j} \left[ -(i-j) \right] \right\} \\
+	&= \dfrac{a^2}{2(N+1)^2} \int_{0}^N \odif{i} \left\{ \left [ij - \dfrac{j^2}{2} \right]_0^i - \left[ ij - \dfrac{j^2}{2} \right]_i^N \right\} \\
+	&= \dfrac{a^2}{2(N+1)^2} \int_{0}^N \odif{i} \left\{ \left (i^2 - \dfrac{i^2}{2} \right) - \left[ \left(Ni - \dfrac{N^2}{2} \right) - \left (i^2 - \dfrac{i^2}{2} \right) \right] \right\} \\
+	&= \dfrac{a^2}{2(N+1)^2} \int_{0}^N \odif{i} \left\{ i^2 - Ni + \dfrac{N^2}{2} \right\} \\
 	&= \dfrac{a^2}{2(N+1)^2} \left[ \dfrac{i^3}{3} - \dfrac{N}{2}i^2 + \dfrac{N^2}{2} i \right]_0^N \\
 	&= \dfrac{a^2}{2(N+1)^2} \left( \dfrac{N^3}{3} - \dfrac{N^3}{2} + \dfrac{N^3}{2} \right) \\
 	&= \dfrac{N^3 }{6(N+1)^2} a^2\\
@@ -2258,9 +2228,9 @@ P_X(x) = \frac{1}{\sqrt{2 \pi}} \exp \left[- \frac{x^2}{2} \right]
 
 上式が確率分布関数となっていることを確認しよう。
 \begin{align}
-\int_{-\infty}^{\infty} P_X(x) \diff x
-	&= \int_{-\infty}^{\infty} \frac{1}{\sqrt{2 \pi}} \exp \left[- \frac{x^2}{2} \right] \diff x \notag \\
-	&= \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} \exp \left[- \frac{1}{2} x^2 \right] \diff x \notag \\
+\int_{-\infty}^{\infty} P_X(x) \odif{x}
+	&= \int_{-\infty}^{\infty} \frac{1}{\sqrt{2 \pi}} \exp \left[- \frac{x^2}{2} \right] \odif{x} \notag \\
+	&= \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} \exp \left[- \frac{1}{2} x^2 \right] \odif{x} \notag \\
 	&= \dfrac{1}{\sqrt{2 \pi}} \sqrt{2 \pi} \notag \\
 	&=1
 \end{align}
@@ -2268,8 +2238,8 @@ P_X(x) = \frac{1}{\sqrt{2 \pi}} \exp \left[- \frac{x^2}{2} \right]
 \footnote{
 積分公式は以下である。
 \begin{eqnarray}
-  \int_{-\infty}^{\infty} \exp(-a x^2) \diff x = \sqrt{\frac{\pi}{a}} \notag \\
-  \int_{-\infty}^{\infty} x^2 \exp(- a x^2) \diff x = \frac{1}{2a}  \sqrt{\frac{\pi}{a}} \notag
+  \int_{-\infty}^{\infty} \exp(-a x^2) \odif{x} = \sqrt{\frac{\pi}{a}} \notag \\
+  \int_{-\infty}^{\infty} x^2 \exp(- a x^2) \odif{x} = \frac{1}{2a}  \sqrt{\frac{\pi}{a}} \notag
 \end{eqnarray}
 }
 を用いた。
@@ -2280,20 +2250,20 @@ P_X(x) = \frac{1}{\sqrt{2 \pi}} \exp \left[- \frac{x^2}{2} \right]
 
 平均（期待値）は、定義より、
 \begin{align}
-E(X) &= \int_{-\infty}^{\infty} x P_X(x) \diff x \notag \\
-	&= \int_{-\infty}^{\infty} x \frac{1}{\sqrt{2 \pi}} \exp \left(- \frac{x^2}{2} \right) \diff x \notag \\
-	&= \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} x \exp \left(- \frac{x^2}{2} \right) \diff x \notag \\
+E(X) &= \int_{-\infty}^{\infty} x P_X(x) \odif{x} \notag \\
+	&= \int_{-\infty}^{\infty} x \frac{1}{\sqrt{2 \pi}} \exp \left(- \frac{x^2}{2} \right) \odif{x} \notag \\
+	&= \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} x \exp \left(- \frac{x^2}{2} \right) \odif{x} \notag \\
 	&= 0
 \end{align}
 
 $x \exp \left(- \dfrac{x^2}{2} \right)$ が奇関数（$f(-x) = -f(x)$）であることから、それを全域にわたって積分した
-$\displaystyle \int_{-\infty}^{\infty} x \exp \left(- \dfrac{x^2}{2} \right) \diff x =0$ である
+$\displaystyle \int_{-\infty}^{\infty} x \exp \left(- \dfrac{x^2}{2} \right) \odif{x} =0$ である
 \footnote{
 この説明で、騙されたような感じを受ける人のために、細かく書けば、
 \begin{align*}
 E(X) 
-	&= \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{0} x \exp \left(- \frac{x^2}{2} \right) \diff x 
-	+ \frac{1}{\sqrt{2 \pi}} \int_{0}^{\infty} x \exp \left(- \frac{x^2}{2} \right) \diff x
+	&= \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{0} x \exp \left(- \frac{x^2}{2} \right) \odif{x} 
+	+ \frac{1}{\sqrt{2 \pi}} \int_{0}^{\infty} x \exp \left(- \frac{x^2}{2} \right) \odif{x}
 \end{align*}
 と積分範囲を二分して、
 \begin{equation*}
@@ -2313,8 +2283,8 @@ E(X)
 最後に、分散である。
 上記のように期待値が 0 であったので、
 \begin{align}
-V(X) &= \int_{-\infty}^{\infty} x^2 P_X(x) \diff x \notag \\
-	&= \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} x^2 \exp \left(- \frac{x^2}{2} \right) \diff x \notag \\
+V(X) &= \int_{-\infty}^{\infty} x^2 P_X(x) \odif{x} \notag \\
+	&= \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} x^2 \exp \left(- \frac{x^2}{2} \right) \odif{x} \notag \\
 	&= \frac{1}{\sqrt{2 \pi}} \frac{1}{2\cdot 1/2} \sqrt{\frac{\pi}{1/2}} \notag \\
 	&=1
 \end{align}
@@ -2331,15 +2301,15 @@ P_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp \left[- \frac{(x -\bar{X})^2}{2 \s
 
 平均（期待値）は、定義より、
 \begin{align}
-E(X) &= \int_{-\infty}^{\infty} x P_X(x) \diff x \notag \\
-	&= \int_{-\infty}^{\infty} x \frac{1}{\sqrt{2 \pi \sigma^2}} \exp \left[- \frac{(x -\bar{X})^2}{2 \sigma^2} \right] \diff x \notag \\
-	&= \frac{1}{\sqrt{2 \pi \sigma^2}}  \int_{-\infty}^{\infty} x \exp \left[- \frac{(x -\bar{X})^2}{2 \sigma^2} \right] \diff x
+E(X) &= \int_{-\infty}^{\infty} x P_X(x) \odif{x} \notag \\
+	&= \int_{-\infty}^{\infty} x \frac{1}{\sqrt{2 \pi \sigma^2}} \exp \left[- \frac{(x -\bar{X})^2}{2 \sigma^2} \right] \odif{x} \notag \\
+	&= \frac{1}{\sqrt{2 \pi \sigma^2}}  \int_{-\infty}^{\infty} x \exp \left[- \frac{(x -\bar{X})^2}{2 \sigma^2} \right] \odif{x}
 \end{align}
 
-$z=\dfrac{x -\bar{X}}{\sigma}$ と変数変換すると、$\diff x=\sigma \diff z$ であるから上式は、
+$z=\dfrac{x -\bar{X}}{\sigma}$ と変数変換すると、$\odif{x}=\sigma \odif{z}$ であるから上式は、
 \begin{align}
 E(X) 
-	&= \frac{1}{\sqrt{2 \pi \sigma^2}}  \int_{-\infty}^{\infty} (z\sigma + \bar{X}) \exp \left(- \frac{z^2}{2} \right) \sigma \diff z \notag \\
+	&= \frac{1}{\sqrt{2 \pi \sigma^2}}  \int_{-\infty}^{\infty} (z\sigma + \bar{X}) \exp \left(- \frac{z^2}{2} \right) \sigma \odif{z} \notag \\
 	&= \frac{\sigma}{\sqrt{2 \pi}}  \int_{-\infty}^{\infty} z \exp \left(- \frac{z^2}{2} \right) dz + \bar{X} \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} \exp \left(- \frac{z^2}{2} \right) dz \notag \\
 	&= \bar{X}
 \end{align}
@@ -2349,17 +2319,17 @@ E(X)
 分散の定義より、
 \begin{align}
 V(X) 
-	&= \int_{-\infty}^{\infty} (x - \bar{X})^2 P_X(x) \diff x \notag \\
-	&= \frac{1}{\sqrt{2 \pi \sigma^2}} \int_{-\infty}^{\infty} x^2 \exp \left[- \frac{(x -\bar{X})^2}{2 \sigma^2} \right] \diff x - \bar{X}^2
+	&= \int_{-\infty}^{\infty} (x - \bar{X})^2 P_X(x) \odif{x} \notag \\
+	&= \frac{1}{\sqrt{2 \pi \sigma^2}} \int_{-\infty}^{\infty} x^2 \exp \left[- \frac{(x -\bar{X})^2}{2 \sigma^2} \right] \odif{x} - \bar{X}^2
 \end{align}
 なお、二行目へは、$V(X)=E(X^2)-\bar{X}^2$ を用いた。
 
 上記の期待値と同様に変数変換すると、
 \begin{align}
 V(X) 
-	&= \frac{1}{\sqrt{2 \pi \sigma^2}}  \int_{-\infty}^{\infty} (z\sigma + \bar{X})^2 \exp \left(- \frac{z^2}{2} \right) \sigma \diff z \notag \\
-	&= \frac{\sigma^2}{\sqrt{2 \pi}}  \int_{-\infty}^{\infty} z^2 \exp \left(- \frac{z^2}{2} \right) \diff z + 2\sigma \bar{X} \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} z \exp \left(- \frac{z^2}{2} \right) \diff z \notag \\
-	&\quad + \bar{X}^2 \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} \exp \left(- \frac{z^2}{2} \right) \diff z - \bar{X}^2 \notag \\
+	&= \frac{1}{\sqrt{2 \pi \sigma^2}}  \int_{-\infty}^{\infty} (z\sigma + \bar{X})^2 \exp \left(- \frac{z^2}{2} \right) \sigma \odif{z} \notag \\
+	&= \frac{\sigma^2}{\sqrt{2 \pi}}  \int_{-\infty}^{\infty} z^2 \exp \left(- \frac{z^2}{2} \right) \odif{z} + 2\sigma \bar{X} \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} z \exp \left(- \frac{z^2}{2} \right) \odif{z} \notag \\
+	&\quad + \bar{X}^2 \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} \exp \left(- \frac{z^2}{2} \right) \odif{z} - \bar{X}^2 \notag \\
 	&= \sigma^2
 \end{align}
 なお、第一項は、積分の公式を利用して $\sqrt{2 \pi}$ で通分した。
@@ -2435,14 +2405,14 @@ x &= pn
 
 ここで、確率分布関数 ${\rm P}(X=x)$ の規格化条件より、
 \begin{align}
-\int_{-\infty}^{\infty} {\rm P}(X=x) \diff x 
-	&= {\rm P}(X=\mu) \int_{-\infty}^{\infty} \exp \left[-\dfrac{(x-\mu)^2}{2 \sigma^2} \right] \diff x \notag \\
+\int_{-\infty}^{\infty} {\rm P}(X=x) \odif{x} 
+	&= {\rm P}(X=\mu) \int_{-\infty}^{\infty} \exp \left[-\dfrac{(x-\mu)^2}{2 \sigma^2} \right] \odif{x} \notag \\
 	&= 1
 \end{align}
-となり、右辺の積分について、$y=\dfrac{(x-\mu)}{\sigma}$ とおくと、$\diff x = \sigma \diff y$ であるので、ガウス積分の公式により、
+となり、右辺の積分について、$y=\dfrac{(x-\mu)}{\sigma}$ とおくと、$\odif{x} = \sigma \odif{y}$ であるので、ガウス積分の公式により、
 \begin{align}
-\int_{-\infty}^{\infty} \exp \left[-\dfrac{(x-\mu)^2}{2 \sigma^2} \right] \diff x 
-	&= \int_{-\infty}^{\infty} \exp \left[- \dfrac{1}{2} y^2 \right] \sigma \diff y \notag \\
+\int_{-\infty}^{\infty} \exp \left[-\dfrac{(x-\mu)^2}{2 \sigma^2} \right] \odif{x} 
+	&= \int_{-\infty}^{\infty} \exp \left[- \dfrac{1}{2} y^2 \right] \sigma \odif{y} \notag \\
 	&= \sqrt{2 \pi} \sigma
 \end{align}
 を得る。
@@ -2539,14 +2509,14 @@ x &= pn
 %
 %ここで、確率分布関数 ${\rm P}(X=x)$ の規格化条件より、
 %\begin{align}
-%\int_{-\infty}^{\infty} {\rm P}(X=x) \diff x 
-%	&= {\rm P}(X=\mu) \int_{-\infty}^{\infty} \exp \left[-\dfrac{(x-\mu)^2}{2 \sigma^2} \right] \diff x \notag \\
+%\int_{-\infty}^{\infty} {\rm P}(X=x) \odif{x} 
+%	&= {\rm P}(X=\mu) \int_{-\infty}^{\infty} \exp \left[-\dfrac{(x-\mu)^2}{2 \sigma^2} \right] \odif{x} \notag \\
 %	&= 1
 %\end{align}
-%となり、右辺の積分について、$y=\dfrac{(x-\mu)}{\sigma}$ とおくと、$\diff x = \sigma \diff y$ であるので、ガウス積分の公式により、
+%となり、右辺の積分について、$y=\dfrac{(x-\mu)}{\sigma}$ とおくと、$\odif{x} = \sigma \odif{y}$ であるので、ガウス積分の公式により、
 %\begin{align}
-%\int_{-\infty}^{\infty} \exp \left[-\dfrac{(x-\mu)^2}{2 \sigma^2} \right] \diff x 
-%	&= \int_{-\infty}^{\infty} \exp \left[- \dfrac{1}{2} y^2 \right] \sigma \diff y \notag \\
+%\int_{-\infty}^{\infty} \exp \left[-\dfrac{(x-\mu)^2}{2 \sigma^2} \right] \odif{x} 
+%	&= \int_{-\infty}^{\infty} \exp \left[- \dfrac{1}{2} y^2 \right] \sigma \odif{y} \notag \\
 %	&= \sqrt{2 \pi} \sigma
 %\end{align}
 %を得る。
