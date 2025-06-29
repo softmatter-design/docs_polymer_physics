@@ -1,0 +1,113 @@
+\documentclass[unicode,10pt]{beamer}
+\usepackage{luatexja}% 日本語したい
+\usepackage[haranoaji,no-math,deluxe,expert,nfssonly,match,scale=1.0]{luatexja-preset}
+\renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+
+\usepackage{amssymb,amsmath,ascmac}
+
+\usepackage{multirow}
+% \usepackage{lltjext}
+
+% \usepackage{siunitx}
+% \usepackage{physics}
+% \AtBeginDocument{\RenewCommandCopy\qty\SI}
+% \ExplSyntaxOn
+% \msg_redirect_name:nnn { siunitx } { physics-pkg } { none }
+% \ExplSyntaxOff
+
+% \usepackage{animate}
+% \usepackage{svg}
+% \usepackage{tikz}
+% \usepackage{xparse}
+% %%%%%%%%%%%%%%%%%%%%%%%
+% \graphicspath{{../../fig/}}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usetikzlibrary{shapes,arrows}
+% %% define fancy arrow. \tikzfancyarrow[<option>]{<text>}. ex: \tikzfancyarrow[fill=red!5]{hoge}
+% \tikzset{arrowstyle/.style n args={2}{inner ysep=0.1ex, inner xsep=0.5em, minimum height=2em, draw=#2, fill=black!20, font=\sffamily\bfseries, single arrow, single arrow head extend=0.4em, #1,}}
+% \NewDocumentCommand{\tikzfancyarrow}{O{fill=black!20} O{none}  m}{
+% \tikz[baseline=-0.5ex]\node [arrowstyle={#1}{#2}] {#3 \mathstrut};}
+
+%目次スライド
+% \AtBeginSection[]{
+%   \frame{\tableofcontents[currentsection]}
+% }
+%アペンディックスのページ番号除去
+% \newcommand{\backupbegin}{
+% \newcounter{framenumberappendix}
+% \setcounter{framenumberappendix}{\value{framenumber}}
+% }
+% \newcommand{\backupend}{
+% \addtocounter{framenumberappendix}{-\value{framenumber}}
+% \addtocounter{framenumber}{\value{framenumberappendix}} 
+% }
+
+%%%%%%%%%%%  theme  %%%%%%%%%%%
+% \usetheme{Copenhagen}
+\usetheme{metropolis}
+% \usetheme{CambridgeUS}
+% \usetheme{Berlin}
+
+%%%%%%%%%%%  inner theme  %%%%%%%%%%%
+% \useinnertheme{default}
+
+% %%%%%%%%%%%  outer theme  %%%%%%%%%%%
+\useoutertheme{default}
+% \useoutertheme{infolines}
+
+%%%%%%%%%%%  color theme  %%%%%%%%%%%
+%\usecolortheme{structure}
+
+%%%%%%%%%%%  font theme  %%%%%%%%%%%
+\usefonttheme{professionalfonts}
+%\usefonttheme{default}
+
+%%%%%%%%%%%  degree of transparency  %%%%%%%%%%%
+%\setbeamercovered{transparent=30}
+
+%%%%%%%%%%%  numbering  %%%%%%%%%%%
+% \setbeamertemplate{numbered}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \setbeamertemplate{items}[default]
+\setbeamertemplate{enumerate item}[default]
+
+% セクション名だけをTOCに出力
+\setcounter{tocdepth}{1}
+
+% \setbeamersize{text margin left=10pt, text margin right=15pt}
+
+\begin{document}
+
+\begin{frame}[plain]
+	\begin{itemize}
+		\item 我々の身の回りの材料の大半は「流れ」ます。
+			\begin{itemize}
+				\item 非常に長い時間をかければ、不動に見える岩や大地も流れていきます。
+				\item その流れるものを「測る学問」がレオロジーです。
+			\end{itemize}
+		\item レオロジーは「お触りの科学」とも言われています。
+			\begin{itemize}
+				\item 人間の五感（とくに触覚）は極めて優秀であり、
+				\item 手触りで物質の特徴の違いを直感的に区別できます。
+				\item しかしながら、この直感的な区別を材料や商品の開発へと結びつけることは困難です。
+				\item 直感的な区別が定性的であり、定量性がないためです。
+			\end{itemize}
+		\item レオロジーの本質をきちんと理解することで、
+			\begin{itemize}
+				\item 材料の違いを明確に区別する方法がイメージでき、
+				\item 材料の設計のポイントもわかってきます。
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+% \begin{frame}
+% 	\frametitle{sss}
+% 		aaa
+% 		\centering
+% 			\includegraphics[width=\textwidth]{test-crop.pdf}
+% 		bbb
+% \end{frame}
+\end{document}
