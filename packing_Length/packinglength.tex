@@ -2,12 +2,38 @@
 \input{../files/preamble}
 
 \begin{document}
-The Packing Length 
-In effect, p can be likened to the molecular diameter of the repeat unit in a polymer chain. A mental picture of the meaning of p can be gained in the following way. The packing length, as noted, is defined as 
+\section{パッキングレングスとは？}
 
+\subsection{当初の定義}
+
+パッキングレングスは、以下のように定義される\footnote{
+    Witten, T. A.; Milner, S. T.; Wang, Z.-G. in Multiphase Macromolecular Systems; Culbertson, B. M., Ed.; Plenum: New York, 1989.
+}。
 \begin{equation}
     p=\dfrac{M}{\langle R^2 \rangle_0 \rho N_a}
+    \label{def_PL}
 \end{equation}
+ここで、$M$はポリマー鎖の分子量、$\langle R^2 \rangle_0$はシータ状態での平均自乗末端間距離、$\rho$は密度、$N_a$はアボガドロ数である。
+なお、この定義の意味は一本のポリマー鎖が占有する体積$\dfrac{M}{\rho N_a}$を$\langle R^2 \rangle_0$で除したものとされているが、物理的な直感に結びつけるのは困難である。
+
+\subsection{Fettersらのアプローチ}
+この$p$というパラメタの意味について考えてみよう。
+
+式\eqref{def_PL}は、Floryの特性比$C_{\infty}$\footnote{
+特性費の定義は、$C_{\infty}=\dfrac{\langle R^2 \rangle_0}{n b^2}$であり、ここでの$n, b$はモノマーユニットの数とその長さ（経路長を$n$で割ったもの）を表す。
+}により、
+
+\begin{align}
+    p&=\dfrac{M}{\langle R^2 \rangle_0 \rho N_a} \\
+    &=\dfrac{M}{C_{\infty} n b^2 \rho N_a} \\
+    &=\dfrac{m_b}{C_{\infty}b^2\rho N_a}
+\end{align}
+
+ここで、ポリマー鎖を形成するモノマー1個の体積$V_b$を以下のように見積もると、
+\begin{equation}
+    V_b=\dfrac{n}{\rho N_a}
+\end{equation}
+
 % Equation (1A) can also be expressed in terms of Flory’s characteristic ratio as 
 
 % The average volume of a chain per bond is given as 
@@ -28,6 +54,8 @@ In effect, p can be likened to the molecular diameter of the repeat unit in a po
 % 0 
 % is the Kuhn step length 
 % l. One can thus think of a chain as being made up of freely jointed rods of length l = C and diameter h. The packing length is thus proportional to the ratio of the cross-sectional area to the length of each rod. Hence, the smaller h is with respect to the skinnier the chain and the smaller p and Vb 
+
+ポリマー鎖中の繰り返しユニットの直径に対応すると考えられる。
 
 \end{document}
 
