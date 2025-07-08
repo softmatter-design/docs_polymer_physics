@@ -1,28 +1,29 @@
-\documentclass[a4paper,11pt]{ltjsarticle}
+\documentclass[a4paper,11pt]{jlreq}
 \input{../files/preamble}
 
 \begin{document}
-\section{パッキングレングスとは？}
+\section{パッキングレングスとは}
 
 \subsection{当初の定義}
 
-パッキングレングスは、以下のように定義される\footnote{
-    Witten, T.A.; Milner, S.T.; Wang, Z.-G. in Multiphase Macromolecular Systems; Culbertson, B.M., Ed.; Plenum: New York, 1989.
-}。
+パッキングレングスは、以下のように定義される。
+% \footnote{
+%     Witten, T.A.; Milner, S.T.; Wang, Z.-G. in Multiphase Macromolecular Systems; Culbertson, B.M., Ed.; Plenum: New York, 1989.
+% }。
 \begin{equation}
     p=\dfrac{M}{\langle R^2 \rangle_0 \rho N_a}
     \label{def_PL}
 \end{equation}
-ここで、$M$はポリマー鎖の分子量、$\langle R^2 \rangle_0$はシータ状態での平均自乗末端間距離、$\rho$は密度、$N_a$はアボガドロ数である。
-なお、この定義の意味は一本のポリマー鎖が占有する体積$\dfrac{M}{\rho N_a}$を$\langle R^2 \rangle_0$で除したものとされているが、物理的な直感に結びつけるのは困難である。
+ここで、$M$はポリマー鎖の分子量、$\langle R^2 \rangle_0$はシータ状態での平均二乗末端間距離、$\rho$は密度、$N_a$はアボガドロ数です。
+なお、この定義の意味は一本のポリマー鎖が占有する体積$\dfrac{M}{\rho N_a}$を$\langle R^2 \rangle_0$で除したものとされているが、物理的な直感に結びつけるのは困難です。
 
 \subsection{Fettersらのアプローチ}
 この$p$というパラメタの意味について考えてみよう。
 
-式\eqref{def_PL}は、Floryの特性比$C_{\infty}$\footnote{
-特性費の定義は、$C_{\infty}=\dfrac{\langle R^2 \rangle_0}{n b^2}$であり、ここでの$n, b$はモノマーユニットの数とその長さ（経路長を$n$で割ったもの）を表す。
-}により、
-
+式\eqref{def_PL}は、Floryの特性比$C_{\infty}$
+% \footnote{
+% 特性費の定義は、$C_{\infty}=\dfrac{\langle R^2 \rangle_0}{n b^2}$であり、ここでの$n, b$はモノマーユニットの数とその長さ（経路長を$n$で割ったもの）を表す。
+% }により、
 \begin{align}
     p&=\dfrac{M}{\langle R^2 \rangle_0 \rho N_a} \\
     &=\dfrac{M}{C_{\infty} n b^2 \rho N_a} \\
