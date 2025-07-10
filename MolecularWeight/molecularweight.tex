@@ -1,9 +1,11 @@
 \documentclass[a4paper,11pt]{ltjsarticle}
 \input{../files/preamble}
 
-\begin{document}
-\section{高分子の分子量}
+\usepackage{xr}
+\externaldocument{./molecularweight_exam}
+\externaldocument{./molecularweight_app}
 
+\begin{document}
 高分子は多数のモノマーが連結したものであり、1つの分子が非常に大きな分子量となっている。
 この分子量という「数」を明確に定義することで、「長さ」あるいは「エントロピー」のような物理量を導出できます。
 したがって、この数をキチンと使いこなすことで材料設計に役立つ基本的な情報を得ることができます。
@@ -127,33 +129,5 @@ GPC（Gel Permeation Chromatography）法は、多孔性の高分子ゲルから
 単分散高分子試料を用いて校正曲線を作成することで、試験試料中の分子量の異なるポリマーの重量分率の分布を決定できる。
 上述したように、重量分率 $w_i$ の分布関数が求まれば、数平均分子量 $\bar{M}_n$ および重量平均分子量 $\bar{M}_w$ を求められるのでした。
 したがって、GPC法により、それぞれの平均分子量および分子量分布の不均一度が同時に測定できることになる。
-
-
-
-\subsection{章末問題}
-
-	\begin{enumerate}
-	\item
-	（和のとり方の確認）\\
-		\vspace{-5mm}
-		\begin{enumerate}
-		\item
-		\label{it:4-1}
-		(\ref{eq:Mn}) 式の二行目への展開を実際にやってみてください。\\
-		（ヒント）\\
-		$\sum$ で表現されている和を実際に開いてみて、$w_i$ とよく見比べてみてください。
-
-		\item
-		\label{it:4-2}
-		(\ref{eq:Mw}) 式の二行目への展開を実際にやってみてください。\\
-		（ヒント）\\
-		上のクイズと同様に、$\sum$ で表現されている和を実際に開いてみてください。
-		\end{enumerate}
-	\item
-	（分子量分布の指標）\\
-	\label{it:4-3}
-	$\dfrac{\bar{M}_w}{\bar{M}_n}$ が、分子量の広がりを評価する指標となる理由について、説明してください。
-
-	\end{enumerate}
 
 \end{document}

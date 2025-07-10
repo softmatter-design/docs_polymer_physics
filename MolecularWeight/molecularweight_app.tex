@@ -1,0 +1,38 @@
+\documentclass[a4paper,11pt]{jlreq}
+\input{../files/preamble}
+
+\usepackage{xr}
+\externaldocument{./molecularweight}
+
+\begin{document}
+\subsection{分子量分布の分散}
+数微分分布関数 $f_n(M)$ の標準偏差は、下式の一行目で定義され、以下のように展開できる。
+\begin{align}
+s_n^2
+	&= \displaystyle \int_0^{\infty}(M - \bar{M}_n)^2 f_n(M) \odif{M} \notag \\
+	&= \displaystyle \int_0^{\infty}(M^2 - 2M \bar{M_n} + \bar{M}_n^2) f_n(M) \odif{M} \notag \\
+	&= \displaystyle \int_0^{\infty} M^2 f_n(M) \odif{M} - 2 \bar{M}_n \displaystyle \int_0^{\infty} M f_n(M) \odif{M} + \bar{M}_n^2 \displaystyle \int_0^{\infty} f_n(M) \odif{M} \notag \\
+	&= \displaystyle \int_0^{\infty} M^2 f_n(M) \odif{M} - 2 \bar{M}_n \bar{M}_n + \bar{M}_n^2  \notag \\
+	&= \displaystyle \int_0^{\infty} M^2 f_n(M) \odif{M} - \bar{M}_n^2
+\end{align}
+
+なお、四行目への展開においては、$\displaystyle \int_0^{\infty} M f_n(M) \odif{M} = \bar{M}_n$ と $\displaystyle \int_0^{\infty} f_n(M) \odif{M} = 1$ を用いた。
+
+ここで、(\ref{eq:Mw}) 式より、
+\begin{align}
+{\bar M}_w 
+	&= \dfrac{\sum_i n_i M_i^2}{\sum_i n_i M_i}\notag \\[6pt]
+	&= \dfrac{\sum_i n_i M_i^2}{\sum_i n_i} \times \dfrac{\sum_i n_i}{\sum_i n_i M_i}\notag \\[6pt]
+	&= \displaystyle \int_0^{\infty} M^2 f_n(M) \odif{M} \times \dfrac{1}{\bar{M}_n }\notag \\[6pt]
+\therefore \displaystyle \int_0^{\infty} M^2 f_n(M) \odif{M} &= \bar{M}_n \bar{M}_w
+\end{align}
+なお、三行目への展開では、数微分分布関数 $f_n(M)$ の二次のモーメントであることを用いている。
+
+この結果を代入して、
+\begin{align}
+s_n^2 &= \bar{M}_n \bar{M}_w - \bar{M}_n^2\notag \\[6pt]
+\therefore \dfrac{s_n}{\bar{M}_n} &= \left(\dfrac{\bar{M}_w}{ \bar{M}_n} - 1 \right)^{-1/2}
+\end{align}
+を得る。
+なお、二行目へは、両辺を $\bar{M}_n^2$ で除した後に、平方根を取っている。
+\end{document}
