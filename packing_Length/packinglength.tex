@@ -1,6 +1,12 @@
 \documentclass[a4paper,11pt]{jlreq}
 \input{../files/preamble}
 
+% \usepackage{luatexja-fontspec}
+% \setmainfont[BoldFont=HaranoAjiMincho-Bold]{HaranoAjiMincho-Regular}
+% \setsansfont[BoldFont=HaranoAjiGothic-Bold]{HaranoAjiGothic-Medium}
+% \setmainjfont[BoldFont=HaranoAjiMincho-Bold]{HaranoAjiMincho-Regular}
+% \setsansjfont[BoldFont=HaranoAjiGothic-Bold]{HaranoAjiGothic-Medium}
+
 \begin{document}
 \section{パッキングレングスとは}
 
@@ -35,6 +41,10 @@
     V_b=\dfrac{n}{\rho N_a}
 \end{equation}
 
+
+    \centering
+        \includesvg[inkscapelatex=false,width=\textwidth]{test.svg}
+
 % Equation (1A) can also be expressed in terms of Flory’s characteristic ratio as 
 
 % The average volume of a chain per bond is given as 
@@ -57,6 +67,66 @@
 % l. One can thus think of a chain as being made up of freely jointed rods of length l = C and diameter h. The packing length is thus proportional to the ratio of the cross-sectional area to the length of each rod. Hence, the smaller h is with respect to the skinnier the chain and the smaller p and Vb 
 
 ポリマー鎖中の繰り返しユニットの直径に対応すると考えられる。
+
+
+ポリマー鎖中の繰り返しユニットの直径に対応すると考えられる。
+
+
+
+% \begin{center}
+% \begin{minipage}{.5\textwidth}
+%     \begin{itembox}[l]{日本語}
+%     \begin{itemize}
+%         \item 試験用
+%         \item 作成
+%     \end{itemize}
+% \end{itembox}
+% \end{minipage}
+% \end{center}
+
+% \begin{figure}[htb]
+%     \centering
+%         \begin{minipage}{0.45\textwidth}
+%     \centering
+%             \begin{itembox}[l]{日本語}
+%     \begin{itemize}
+%         \item 試験用
+%         \item 作成
+%     \end{itemize}
+% \end{itembox}
+%         \end{minipage}
+%         \begin{minipage}{0.45\textwidth}
+%     \centering
+%             \begin{itembox}[l]{日本語}
+%     \begin{itemize}
+%         \item 試験用
+%         \item 作成
+%     \end{itemize}
+% \end{itembox}
+%         \end{minipage}
+%         \caption{}
+%         \label{}
+% \end{figure}
+
+
+\mcfamily
+{\ltseries この行は明朝体の細字指定。葛飾，蓬莱，煎餅}
+
+{\mdseries この行は明朝体の中字指定。葛飾，蓬莱，煎餅}
+
+{\bfseries この行は明朝体の太字指定。葛飾，蓬莱，煎餅}
+
+\gtfamily
+{\mdseries この行はゴシック体の中字指定。葛飾，蓬莱，煎餅}
+
+{\bfseries この行はゴシック体の太字指定。葛飾，蓬莱，煎餅}
+
+{\ebseries この行はゴシック体の特太指定。葛飾，蓬莱，煎餅}
+
+\mgfamily
+この行は丸ゴシック体の指定。葛飾，蓬莱，煎餅
+\normalfont
+
 
 \end{document}
 
